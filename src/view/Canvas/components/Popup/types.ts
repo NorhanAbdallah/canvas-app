@@ -1,4 +1,4 @@
-import { box } from "../../../../assets/canvas-data/types";
+import { box } from '../../../../assets/canvas-data/types';
 
 export interface PopupProps {
   box?: box;

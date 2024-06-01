@@ -39,3 +39,8 @@ Open [http://localhost:5173/](http://localhost:5173/) to view homePage it in the
 ## Deployment
  
  -Vercel 
+
+ ## Enhancements 
+ - Use context to handle data instead of state
+ - Use package to handle form as "react-hook-form"
+ - Add tests

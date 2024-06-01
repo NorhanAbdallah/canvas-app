@@ -1,22 +1,22 @@
-import { useRef, useEffect } from "react";
-import { UseCanvasProps } from "./types";
+import { useRef, useEffect } from 'react';
+import { UseCanvasProps } from './types';
 
 const getClassColor = (className: string) => {
   switch (className) {
-    case "Name":
-      return "red";
-    case "Description":
-      return "blue";
-    case "Date":
-      return "green";
-    case "Amount":
-      return "orange";
-    case "Supplier":
-      return "purple";
-    case "Number":
-      return "brown";
+    case 'Name':
+      return 'red';
+    case 'Description':
+      return 'blue';
+    case 'Date':
+      return 'green';
+    case 'Amount':
+      return 'orange';
+    case 'Supplier':
+      return 'purple';
+    case 'Number':
+      return 'brown';
     default:
-      return "black";
+      return 'black';
   }
 };
 
@@ -27,7 +27,7 @@ const useCanvas = (props: UseCanvasProps) => {
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    const ctx = canvas?.getContext("2d");
+    const ctx = canvas?.getContext('2d');
 
     if (canvas && ctx) {
       const img = new Image();
@@ -45,7 +45,7 @@ const useCanvas = (props: UseCanvasProps) => {
             box.points[2] - box.points[0],
             box.points[3] - box.points[1],
           );
-          ctx.font = "16px Arial";
+          ctx.font = '16px Arial';
           ctx.fillStyle = getClassColor(box.class);
           ctx.fillText(box.text, box.points[0], box.points[1] - 5);
         });

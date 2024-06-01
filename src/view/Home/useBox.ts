@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { box } from "../../assets/canvas-data/types";
-import { canvasData } from "../../assets/canvas-data";
+import { useState } from 'react';
+import { box } from '../../assets/canvas-data/types';
+import { canvasData } from '../../assets/canvas-data';
 
 const useBox = () => {
   const [boxes, setBoxes] = useState<Array<box>>(canvasData.boxes);

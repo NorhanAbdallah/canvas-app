@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { PopupProps } from "./types";
+import React, { useEffect, useState } from 'react';
+import { PopupProps } from './types';
 import {
   popUpWrapperStyles,
   saveBtnStyles,
@@ -8,12 +8,12 @@ import {
   btnsWrapperStyles,
   textInputStyles,
   classSelectStyles,
-} from "./styles";
-import { classes } from "./consts";
+} from './styles';
+import { classes } from './consts';
 
 const Popup: React.FC<PopupProps> = ({ box, onSave, onCancel, onDelete }) => {
-  const [text, setText] = useState(box?.text || "");
-  const [className, setClassName] = useState(box?.class || "");
+  const [text, setText] = useState(box?.text || '');
+  const [className, setClassName] = useState(box?.class || '');
 
   const handleSave = () => {
     onSave(text, className);
@@ -49,7 +49,7 @@ const Popup: React.FC<PopupProps> = ({ box, onSave, onCancel, onDelete }) => {
         style={classSelectStyles}
       >
         {classes.map((classType) => (
-          <option value={classType.value}>{classType.name}</option>
+          <option value={classType.value} key={classType.value}>{classType.name}</option>
         ))}
       </select>
 

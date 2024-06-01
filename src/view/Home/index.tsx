@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import Canvas from "../Canvas";
-import Sidebar from "../Sidebar";
-import Popup from "../Canvas/components/Popup";
-import { canvasData } from "../../assets/canvas-data";
-import { mainWrapperStyles, canvasWrapperStyles } from "./styles";
-import useBox from "./useBox";
+import React from 'react';
+import Canvas from '../Canvas';
+import Sidebar from '../Sidebar';
+import Popup from '../Canvas/components/Popup';
+import { canvasData } from '../../assets/canvas-data';
+import { mainWrapperStyles, canvasWrapperStyles } from './styles';
+import useBox from './useBox';
 
 const Home: React.FC = () => {
   const {

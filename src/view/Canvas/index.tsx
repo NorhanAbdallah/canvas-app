@@ -1,6 +1,6 @@
-import React from "react";
-import useCanvas from "./useCanvas";
-import { CanvasProps } from "./types";
+import React from 'react';
+import useCanvas from './useCanvas';
+import { CanvasProps } from './types';
 
 const Canvas: React.FC<CanvasProps> = ({
   base64Image,

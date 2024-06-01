@@ -1,7 +1,7 @@
-import React from "react";
-import { RouteObject, useRoutes } from "react-router";
-import { Paths } from "./paths";
-import Home from "../view/Home";
+import React from 'react';
+import { RouteObject, useRoutes } from 'react-router-dom';
+import { Paths } from './paths';
+import Home from '../view/Home';
 
 export default function Routes() {
   const routes: RouteObject[] = [

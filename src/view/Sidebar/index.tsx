@@ -1,13 +1,13 @@
-import React from "react";
-import { box } from "../../assets/canvas-data/types";
-import { SideBarProps } from "./types";
+import React from 'react';
+import { box } from '../../assets/canvas-data/types';
+import { SideBarProps } from './types';
 import {
   sidebarStyles,
   classGroupStyles,
   classTitleStyles,
   boxListStyles,
   boxItemStyles,
-} from "./styles";
+} from './styles';
 
 const Sidebar: React.FC<SideBarProps> = ({ boxes, onboxClick }) => {
   const groupedBoxes = boxes.reduce(
