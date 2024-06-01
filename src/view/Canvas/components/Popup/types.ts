@@ -9,5 +9,5 @@ export interface PopupProps {
 
 export type classesTypes = Array<{
   name: string;
-  value: string
-}>
+  value: string;
+}>;

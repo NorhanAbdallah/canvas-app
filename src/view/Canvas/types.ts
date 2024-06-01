@@ -6,7 +6,6 @@ export interface UseCanvasProps {
   onDoubleClick: (box: box, index: number) => void;
 }
 
-
 export interface CanvasProps {
   base64Image: string;
   boxes: box[];

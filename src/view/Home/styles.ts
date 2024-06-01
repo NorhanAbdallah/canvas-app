@@ -1,11 +1,10 @@
 import { CSSProperties } from "react";
 
-
 export const mainWrapperStyles: CSSProperties = {
-    display: "flex"
-}
+  display: "flex",
+};
 
 export const canvasWrapperStyles: CSSProperties = {
-    position: "relative",
-    flex: 1
-}
+  position: "relative",
+  flex: 1,
+};
