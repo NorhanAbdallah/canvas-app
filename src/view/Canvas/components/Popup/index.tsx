@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { PopupProps } from "./types";
-import { popUpWrapperStyles, saveBtnStyles, deleteBtnStyles, cancelBtnStyles, btnsWrapperStyles, textInputStyles,classSelectStyles } from "./styles";
+import { popUpWrapperStyles, saveBtnStyles, deleteBtnStyles, cancelBtnStyles, btnsWrapperStyles, textInputStyles, classSelectStyles } from "./styles";
 
 const Popup: React.FC<PopupProps> = ({ box, onSave, onCancel, onDelete }) => {
 
@@ -17,6 +17,14 @@ const Popup: React.FC<PopupProps> = ({ box, onSave, onCancel, onDelete }) => {
       setText(box.text)
     }
   }, [box?.text])
+
+
+  useEffect(() => {
+    if (box?.class) {
+      setClassName(box.class)
+    }
+  }, [box?.class])
+
 
   if (!box) return null;
 

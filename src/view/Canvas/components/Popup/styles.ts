@@ -1,4 +1,4 @@
-import { box } from "../../assets/canvas-data/types";
+import { box } from "../../../../assets/canvas-data/types";
 import { CSSProperties } from "react";
 
 export const popUpWrapperStyles = (box: box): CSSProperties => ({
