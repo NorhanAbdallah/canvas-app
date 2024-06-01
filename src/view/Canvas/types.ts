@@ -5,3 +5,10 @@ export interface UseCanvasProps {
   boxes: Array<box>;
   onDoubleClick: (box: box, index: number) => void;
 }
+
+
+export interface CanvasProps {
+  base64Image: string;
+  boxes: box[];
+  onDoubleClick: (box: box, index: number) => void;
+}

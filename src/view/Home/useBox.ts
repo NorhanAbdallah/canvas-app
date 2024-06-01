@@ -1,18 +1,13 @@
 import React, { useState } from "react";
-import Canvas from "../Canvas";
-import Sidebar from "../Sidebar";
-import Popup from "../Canvas/components/Popup";
 import { box } from "../../assets/canvas-data/types";
 import { canvasData } from "../../assets/canvas-data";
 
-const Landing: React.FC = () => {
+const useBox = () => {
     const [boxes, setBoxes] = useState<Array<box>>(canvasData.boxes);
     const [selectedBox, setSelectedBox] = useState<{
         box: box;
         index: number;
     } | null>(null);
-
-
 
     const handleDoubleClick = (box: box, index: number) => {
         setSelectedBox({ box, index });
@@ -47,25 +42,7 @@ const Landing: React.FC = () => {
             setSelectedBox(null);
         }
     };
-
-    return (
-        <div style={{ display: "flex" }}>
-            <Sidebar boxes={boxes} onboxClick={handleBoxClick} />
-            <div style={{ position: "relative", flex: 1 }}>
-                <Canvas
-                    base64Image={canvasData.base64}
-                    boxes={boxes}
-                    onDoubleClick={handleDoubleClick}
-                />
-                <Popup
-                    box={selectedBox?.box}
-                    onSave={handleSave}
-                    onCancel={handleCancel}
-                    onDelete={handleDelete}
-                />
-            </div>
-        </div>
-    );
+    return { handleBoxClick, handleDoubleClick, handleSave, handleCancel, handleDelete, boxes, selectedBox };
 };
 
-export default Landing;
+export default useBox;

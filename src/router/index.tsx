@@ -1,15 +1,14 @@
 import React from 'react';
-
 import { RouteObject, useRoutes } from 'react-router';
 import { Paths } from './paths';
-import Landing from '../view/Landing';
+import Home from '../view/Home';
 
 export default function Routes() {
 
     const routes: RouteObject[] = [
         {
             path: Paths.HOME,
-            element: <Landing />,
+            element: <Home />,
         },
     ];
 

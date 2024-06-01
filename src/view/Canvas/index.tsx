@@ -1,14 +1,8 @@
-import React, { useRef, useEffect, useState } from "react";
-import { box } from "../../assets/canvas-data/types";
+import React from "react";
 import useCanvas from "./useCanvas";
+import { CanvasProps } from './types'
 
-interface Props {
-  base64Image: string;
-  boxes: box[];
-  onDoubleClick: (box: box, index: number) => void;
-}
-
-const Canvas: React.FC<Props> = ({ base64Image, boxes, onDoubleClick }) => {
+const Canvas: React.FC<CanvasProps> = ({ base64Image, boxes, onDoubleClick }) => {
   const { canvasRef, handleDoubleClick } = useCanvas({
     base64Image,
     boxes,

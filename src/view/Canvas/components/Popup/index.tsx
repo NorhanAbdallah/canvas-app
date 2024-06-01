@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { PopupProps } from "./types";
 import { popUpWrapperStyles, saveBtnStyles, deleteBtnStyles, cancelBtnStyles, btnsWrapperStyles, textInputStyles, classSelectStyles } from "./styles";
+import { classes } from "./consts";
 
 const Popup: React.FC<PopupProps> = ({ box, onSave, onCancel, onDelete }) => {
 
@@ -38,12 +39,7 @@ const Popup: React.FC<PopupProps> = ({ box, onSave, onCancel, onDelete }) => {
       />
 
       <select value={className} onChange={(e) => setClassName(e.target.value)} style={classSelectStyles}>
-        <option value="Name">Name</option>
-        <option value="Description">Description</option>
-        <option value="Date">Date</option>
-        <option value="Amount">Amount</option>
-        <option value="Supplier">Supplier</option>
-        <option value="Number">Number</option>
+        {classes.map((classType) => <option value={classType.value}>{classType.name}</option>)}
       </select>
 
 

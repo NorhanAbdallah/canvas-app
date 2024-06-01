@@ -6,3 +6,8 @@ export interface PopupProps {
   onCancel: () => void;
   onDelete: () => void;
 }
+
+export type classesTypes = Array<{
+  name: string;
+  value: string
+}>
