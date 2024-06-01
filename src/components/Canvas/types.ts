@@ -1,0 +1,7 @@
+import { box } from "../../assets/canvas-data/types";
+
+export interface UseCanvasProps {
+  base64Image: string;
+  boxes: Array<box>;
+  onDoubleClick: (box: box, index: number) => void;
+}
